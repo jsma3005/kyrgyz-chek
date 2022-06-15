@@ -1,0 +1,96 @@
+.root {
+  display: flex;
+  .bannerContent {
+    width: 50%;
+    padding: 4rem;
+
+    .logo {
+      text-align: center;
+
+      h1 {
+        cursor: pointer;
+        font-size: 2.3rem;
+        font-family: 'Neucha', cursive;
+        margin-bottom: 2rem;
+        span {
+          color: #fdd70d;
+        }
+      }
+    }
+
+    .nav {
+      ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        li {
+          &:not(:last-child) {
+            margin-right: 1.5rem;
+          }
+          a {
+            color: #000;
+            text-decoration: none;
+            font-size: 1.2rem;
+            &:hover {
+              color: #4D4D4D;
+            }
+          }
+        }
+      }
+    }
+
+    .title {
+      font-family: 'Neucha', cursive;
+      color: #4D4D4D;
+      text-align: center;
+      font-size: 2.3rem;
+      line-height: 1.3;
+      letter-spacing: 2px;
+      margin: 4rem 0;
+    }
+
+    .goCatalog {
+      text-align: center;
+      a {
+        font-size: 30px;
+        padding: 15px 35px;
+        color: #4D4D4D;
+        background-color: #F5E485;
+        text-decoration: none;
+        transition: .2s;
+        font-family: 'Neucha', cursive;
+        &:hover {
+          background-color: #efe7ba;
+        }
+      }
+    }
+  }
+
+  .bannerImg {
+    width: 50%;
+    position: relative;
+    transition: .5s;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .5s;
+    }
+    &:hover {
+      img {
+        transform: scale(1.3);
+      } 
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, .3);
+      z-index: 2;
+    }
+  }
+}

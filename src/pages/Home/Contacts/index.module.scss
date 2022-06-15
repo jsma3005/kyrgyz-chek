@@ -1,0 +1,30 @@
+.root {
+  margin-bottom: 3rem;
+  .container {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    .contacts {
+      width: 30%;
+      p {
+        color: #4d4d4d;
+        font-size: 1.2rem;
+        margin-bottom: .8rem;
+      }
+  
+      .icons {
+        display: flex;
+        svg {
+          font-size: 2.5rem;
+          color: #4d4d4d;
+          display: block;
+          margin-right: 1rem;
+        }
+      }
+    }
+    .map {
+      width: 70%;
+    }
+  }
+}

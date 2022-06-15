@@ -1,0 +1,26 @@
+.drawer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .activeNavLink {
+    color: #efefef;
+    background-color: #c22088;
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    margin-bottom: .5rem;
+    transition: .3s;
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  .navLink {
+    transition: .3s;
+    padding: .5rem 1rem;
+    margin-bottom: .5rem;
+    &:focus {
+      outline: none;
+    }
+  }
+}

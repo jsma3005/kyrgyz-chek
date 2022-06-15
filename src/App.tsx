@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import { Interceptor } from './configs'
+import { AdminLayout } from './pages/Admin/AdminLayout'
+import { AuthPage } from './pages/Auth'
+import Main from './pages/Home'
+import Catalog from './pages/Catalog'
 
-function App() {
+Interceptor.initBaseURL()
+
+const App = () => {
+
+  React.useEffect(() => {
+    const carts = JSON.parse(localStorage.getItem('carts') as any)
+
+    if (!carts) {
+      localStorage.setItem('carts', JSON.stringify([]))
+    }
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/catalog/:id" element={<Catalog />} />
+        <Route path="/admin/*" element={<AdminLayout />} />
+        <Route path="/auth" element={<AuthPage />} />
+      </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

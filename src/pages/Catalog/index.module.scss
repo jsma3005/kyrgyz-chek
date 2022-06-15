@@ -1,0 +1,16 @@
+.flex {
+  width: 80%;
+  margin: 4rem auto;
+  display: flex;
+
+  .categories {
+    width: 25%;
+    height: fit-content;
+    border: 1px solid #dfdee2;
+    padding: 1rem;
+  }
+
+  .products {
+    width: 75%;
+  }
+}

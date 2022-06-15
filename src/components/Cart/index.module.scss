@@ -1,0 +1,21 @@
+.cart {
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  border-radius: 50%;
+  position: fixed;
+  cursor: pointer;
+  border: 1px solid #4d4d4d;
+  top: 85%;
+  right: 3%;
+  z-index: 9999;
+
+  svg {
+    width: 100%;
+  }
+}
+
+
+.divider {
+  margin: .5rem 0;
+}

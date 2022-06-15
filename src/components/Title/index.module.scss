@@ -1,0 +1,17 @@
+.root {
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  margin: 6rem 0;
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  span {
+    display: block;
+    width: 250px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #fdd70d;
+    margin: 0 auto;
+  }
+}
