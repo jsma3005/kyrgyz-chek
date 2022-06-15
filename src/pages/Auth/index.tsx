@@ -35,7 +35,7 @@ export const AuthPage = () => {
   const onSubmit = React.useCallback((data: AuthTypes) => {
     if (data.alias === 'admin' && data.password === 'admin') {
       localStorage.setItem('isAuth', '1')
-      navigate('/admin')
+      navigate('/admin/catalog')
       setError('')
     } else {
       setError('Неправльный логин или пароль')
