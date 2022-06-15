@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import cls from './index.module.scss'
 import { HashLink } from 'react-router-hash-link'
 
@@ -61,7 +61,7 @@ const Head = () => {
         </div>
 
         <div className={cls.goCatalog}>
-          <Link to={'/#catalog'}>В каталог</Link>
+          <HashLink to={'/#catalog'}>В каталог</HashLink>
         </div>
       </div>
 
