@@ -3,6 +3,7 @@ import { Navigate, NavLink, Route, Routes } from 'react-router-dom'
 import { MrDrawer } from '../../components/MrDrawer'
 import cls from './index.module.scss'
 import { List } from './pages/Catalog/List'
+import { Orders } from './pages/Orders'
 import { Products } from './pages/Products'
 
 interface Nav {
@@ -18,6 +19,11 @@ const navs: Nav[] = [
     id: 1,
     title: 'Каталог',
     to: '/admin/catalog',
+  },
+  {
+    id: 2,
+    title: 'Заказы',
+    to: '/admin/orders',
   },
 ]
 
@@ -53,6 +59,8 @@ export const AdminLayout = () => {
         <Route path="/products/:id" element={<Products.Pages.List />} />
         <Route path="/products/:id/create" element={<Products.Pages.Create />} />
         <Route path="/products/:id/:productId" element={<Products.Pages.Page />} />
+        <Route path="/orders" element={<Orders.Pages.List />} />
+        <Route path="/orders/:id" element={<Orders.Pages.Page />} />
       </Routes>
     </div>
   )

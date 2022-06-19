@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { apiUrl } from '../../../../../configs'
 import { ProductsTypes } from '../types'
 
 interface GetProps {
@@ -11,7 +10,7 @@ export const get = ({
   categoryId,
   productId,
 }: GetProps) => {
-  return axios.get(`${apiUrl}/categories/${categoryId}/products/${productId}.json`)
+  return axios.get(`/categories/${categoryId}/products/${productId}.json`)
 }
 
 export const patch = ({
@@ -19,12 +18,12 @@ export const patch = ({
   productId,
   data,
 }: GetProps & { data: ProductsTypes.Form }) => {
-  return axios.patch(`${apiUrl}/categories/${categoryId}/products/${productId}.json`, data)
+  return axios.patch(`/categories/${categoryId}/products/${productId}.json`, data)
 }
 
 export const remove = ({
   categoryId,
   productId,
 }: GetProps) => {
-  return axios.delete(`${apiUrl}/categories/${categoryId}/products/${productId}.json`)
+  return axios.delete(`/categories/${categoryId}/products/${productId}.json`)
 }
