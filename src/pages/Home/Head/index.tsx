@@ -40,7 +40,7 @@ const Head = () => {
       <div className={cls.bannerContent}>
         <div className={cls.logo}>
           <h1 onClick={() => navigate('/')}>
-            <span>Кыргыз</span>Чек
+            <span>Строй</span>Маг
           </h1>
         </div>
 
